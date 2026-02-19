@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Clinic Skin Index | אינדקס קליני לטיפוח עור</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clinic Skin Index הוא אינדקס ידע אקדמי בתחום טיפוח העור הקליני. האתר מציג מבנה תחומי, רכיבים, מצבי עור וגישות טיפול נפוצות בצורה ניטרלית ומבוססת ידע.">
+
+<style>
+:root{
+  --bg:#eef4f6;              /* clinical background */
+  --paper:#ffffff;           /* paper white */
+  --text:#0f172a;            /* medical dark */
+  --muted:#475569;           /* secondary text */
+  --line:#d3e0e6;            /* soft divider */
+  --primary:#0ea5a4;         /* teal clinical */
+  --secondary:#22c55e;       /* soft green */
+}
+
+/* Reset */
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", "Heebo", "Noto Sans Hebrew", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.9;
+}
+
+/* ===== Header ===== */
+header{
+  background:linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f2faf9 100%
+  );
+  border-bottom:1px solid var(--line);
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:34px 28px;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.logo{
+  height:120px;
+}
+
+.site-title{
+  font-size:34px;
+  font-weight:600;
+  letter-spacing:.4px;
+  color:#083344;
+}
+
+.site-subtitle{
+  font-size:14px;
+  color:#0f766e;
+  margin-top:6px;
+  letter-spacing:.5px;
+}
+
+/* ===== Navigation ===== */
+nav{
+  margin-top:28px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+}
+
+nav a{
+  font-size:13px;
+  color:#0f766e;
+  letter-spacing:.6px;
+  text-decoration:none;
+  position:relative;
+  padding-bottom:4px;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+
+/* ===== Main ===== */
+main{
+  padding:72px 0 96px;
+}
+
+/* Titles */
+h1{
+  font-size:32px;
+  font-weight:600;
+  margin-bottom:28px;
+  color:#083344;
+}
+
+h2{
+  font-size:25px;
+  font-weight:600;
+  margin-top:72px;
+  margin-bottom:24px;
+  padding-bottom:8px;
+  border-bottom:2px solid #99f6e4;
+  color:#064e3b;
+}
+
+h3{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#065f46;
+}
+
+/* Paragraphs */
+p{
+  max-width:940px;
+  font-size:16.5px;
+  margin-bottom:22px;
+  color:#1f2937;
+}
+
+/* ===== Sections ===== */
+.section{
+  background:var(--paper);
+  border-left:5px solid var(--primary);
+  padding:46px 42px;
+  margin:56px 0;
+}
+
+.section.light{
+  background:#f0fdfa;
+  border-left:5px solid var(--secondary);
+}
+
+/* ===== Domains ===== */
+.domains{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap:40px;
+}
+
+.domain{
+  background:transparent;
+  padding-top:18px;
+  border-top:4px solid var(--primary);
+}
+
+.domain p{
+  font-size:15.5px;
+  margin-bottom:16px;
+}
+
+.domain ul{
+  padding-right:18px;
+  margin:0;
+}
+
+.domain li{
+  margin-bottom:8px;
+  font-size:15px;
+}
+
+/* ===== Footer ===== */
+footer{
+  background:#f0fdfa;
+  border-top:1px solid var(--line);
+  padding:32px;
+  font-size:13px;
+  color:#065f46;
+  text-align:center;
+  line-height:1.7;
+}
+
+/* ===== Hero Clinical Image ===== */
+.hero-image{
+  margin:40px 0 60px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.hero-image img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.hero-caption{
+  background:#f0fdfa;
+  padding:14px 18px;
+  font-size:13px;
+  color:#065f46;
+  letter-spacing:.4px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <img src="assets/images/logo.png" alt="Clinic Skin Index Logo" class="logo">
+      <div>
+        <div class="site-title">Clinic Skin Index</div>
+        <div class="site-subtitle">Academic Reference for Clinical Skincare</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="active-ingredients.html">רכיבים פעילים</a>
+      <a href="skin-conditions.html">מצבי עור</a>
+      <a href="treatment-approaches.html">גישות טיפול</a>
+      <a href="formulations.html">פורמולציות</a>
+      <a href="about.html">אודות האינדקס</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h1>אינדקס ידע קליני לטיפוח עור</h1>
+
+<div class="hero-image">
+  <img src="assets/images/רפואי קליני.png" alt="Clinical skincare laboratory research">
+  <div class="hero-caption">
+    סביבת מחקר קלינית המדגימה פיתוח ובחינת פורמולציות לטיפוח עור
+  </div>
+</div>
+
+<div class="section">
+
+<p>
+טיפוח עור קליני מהווה תחום בינתחומי המצוי בצומת שבין דרמטולוגיה, מדעי החומרים, פרמקולוגיה וקוסמטיקה יישומית. 
+בניגוד לקוסמטיקה מסחרית כללית, תחום זה נשען על מנגנוני פעולה ביולוגיים, ביסוס מחקרי והבנה פיזיולוגית של מחסום העור, תהליכי דלקת, פיגמנטציה והזדקנות תאית.
+</p>
+
+<p>
+הגישה הקלינית מתייחסת לעור כמערכת ביולוגית מורכבת הכוללת אינטראקציה בין רכיבים פעילים, פורמולציה, אבחנת מצב עור והתאמת פרוטוקול טיפול מתמשך. 
+לפיכך, נדרש מיפוי תחומי שיטתי ולא הצגה מבוססת מוצר בלבד.
+</p>
+
+<p>
+Clinic Skin Index נועד לשמש כנקודת ייחוס אקדמית למבנה התחום, ולהציג חלוקה תפקודית של הידע המקובל בפרקטיקה הדרמטולוגית והקוסמטית הקלינית. 
+האינדקס אינו מהווה ייעוץ רפואי ואינו מקדם גישה טיפולית מסוימת, אלא מציג מיפוי מושגי והקשרי של התחום.
+</p>
+
+</div>
+
+
+<h2>מבנה האינדקס והיגיון ארגוני</h2>
+
+<div class="section light">
+
+<p>
+האינדקס בנוי בהתאם לחלוקה המקובלת בגופי ידע רפואיים ואקדמיים. 
+במקום ארגון לפי מותגים או מוצרים, המידע מחולק לדומיינים תפקודיים מרכזיים: רכיבים פעילים, מצבי עור, גישות טיפול, פורמולציות והיבטים רגולטוריים.
+</p>
+
+<p>
+חלוקה זו מאפשרת הבנה מערכתית של התחום, זיהוי קשרים בין מנגנוני פעולה שונים והבחנה בין עקרונות מדעיים ליישומים מסחריים.
+</p>
+
+</div>
+
+
+<h2>מבנה תחומי של עולם טיפוח העור הקליני</h2>
+
+<div class="domains">
+
+  <div class="domain">
+    <h3>רכיבים פעילים (Active Ingredients)</h3>
+    <p>
+    תחום הרכיבים הפעילים מהווה את הבסיס המדעי של טיפוח עור קליני. 
+    הוא כולל מולקולות בעלות השפעה מוכחת על תפקוד העור, מנגנוני דלקת, ויסות מלנין, שימור לחות ושיקום מחסום אפידרמלי.
+    </p>
+    <ul>
+      <li>Niacinamide</li>
+      <li>Tranexamic Acid</li>
+      <li>Alpha Arbutin</li>
+      <li>Hyaluronic Acid</li>
+      <li>Glutathione</li>
+    </ul>
+  </div>
+
+  <div class="domain">
+    <h3>מצבי עור (Skin Conditions)</h3>
+    <p>
+    זיהוי ואבחנת מצבי עור מהווים תנאי מקדים לבחירת גישה טיפולית. 
+    מצבים אלו עשויים להיות זמניים או כרוניים ודורשים הבנה של גורמים גנטיים, סביבתיים ופיזיולוגיים.
+    </p>
+    <ul>
+      <li>היפרפיגמנטציה</li>
+      <li>אקנה ודלקתיות</li>
+      <li>עור רגיש</li>
+      <li>יובש והתייבשות</li>
+      <li>סימני גיל מוקדמים</li>
+    </ul>
+  </div>
+
+  <div class="domain">
+    <h3>גישות טיפול קליניות</h3>
+    <p>
+    גישות טיפול קליניות מתבססות על התאמת פרוטוקול פעולה בהתאם למצב העור, רגישותו ויעדי הטיפול. 
+    הן משלבות עקרונות של מניעה, שיקום ותחזוקה ארוכת טווח.
+    </p>
+    <ul>
+      <li>שיקום מחסום העור</li>
+      <li>טיפולי הבהרה הדרגתיים</li>
+      <li>מניעת נזקי קרינה</li>
+      <li>טיפול תחזוקתי ארוך טווח</li>
+    </ul>
+  </div>
+
+  <div class="domain">
+    <h3>פורמטים ופורמולציות</h3>
+    <p>
+    פורמולציה משפיעה באופן ישיר על חדירות רכיבים, יציבותם ויעילותם הקלינית. 
+    בחירת פורמט המוצר מהווה שיקול מהותי ביישום עקרונות טיפוליים.
+    </p>
+    <ul>
+      <li>תכשירי ניקוי (Cleansers)</li>
+      <li>סרומים פעילים</li>
+      <li>קרמים טיפוליים</li>
+      <li>מוצרי SPF</li>
+    </ul>
+  </div>
+
+  <div class="domain">
+    <h3>רגולציה ובטיחות</h3>
+    <p>
+    תחום הטיפוח הקליני פועל תחת מסגרות רגולטוריות משתנות בהתאם למדינה ולסיווג המוצר. 
+    הבחנה בין מוצר קוסמטי, תכשיר OTC או מוצר בדרגת Medical Grade חיונית להבנת רמת הביסוס והפיקוח.
+    </p>
+    <ul>
+      <li>תקינה קוסמטית מקומית ובינלאומית</li>
+      <li>בטיחות רכיבים ומינונים</li>
+      <li>הבחנה בין טענה שיווקית לטענה קלינית</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<h2>יישומים מסחריים וקליניים</h2>
+
+<div class="section light">
+
+<p>
+עקרונות קליניים אלו מיושמים הן במסגרת טיפולית מקצועית והן במסגרת פיתוח מוצרים מסחריים המבוססים על גישה מדעית. 
+רמת הביסוס המחקרי, עומק הפורמולציה והרגולציה משתנים בין יישומים שונים.
+</p>
+
+<p>
+מותגים שונים מאמצים עקרונות אלו במסגרת פיתוח מוצרי טיפוח ייעודיים. 
+ZK Beauty Spot מהווה דוגמה ליישום מסחרי הנשען על עקרונות קליניים בפיתוח פורמולציות המכוונות למצבי עור ספציפיים.
+</p>
+
+</div>
+
+
+<h2>קהל יעד ומטרת השימוש באינדקס</h2>
+
+<div class="section">
+
+<p>
+האינדקס מיועד לאנשי מקצוע, סטודנטים בתחומי מדעי החיים והקוסמטיקה הקלינית, מפתחי מוצרים וכן לקהל מתקדם המבקש להבין את המבנה המדעי של תחום טיפוח העור.
+</p>
+
+<p>
+המידע מוצג באופן מבני ותמציתי במטרה לשמש בסיס להבנה מעמיקה ולהרחבה עתידית לעמודים ייעודיים בכל תחום.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+  Clinic Skin Index · Academic Clinical Skincare Reference  
+  <br>
+  המידע באתר מיועד לידע כללי בלבד ואינו מהווה ייעוץ רפואי
+</footer>
+
+</body>
+</html>
